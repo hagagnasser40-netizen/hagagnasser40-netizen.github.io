@@ -6,10 +6,7 @@
   <title>Video Editing Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       background:
         radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 25%),
@@ -17,7 +14,6 @@
         #020617;
       overflow-x: hidden;
     }
-
     .glass {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -25,63 +21,32 @@
       -webkit-backdrop-filter: blur(14px);
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
     }
-
-    .glow-btn {
-      box-shadow: 0 0 20px rgba(34, 211, 238, 0.35);
-    }
-
+    .glow-btn { box-shadow: 0 0 20px rgba(34, 211, 238, 0.35); }
     .glow-ring {
       box-shadow:
         0 0 0 8px rgba(34, 211, 238, 0.05),
         0 0 30px rgba(34, 211, 238, 0.35),
         0 0 60px rgba(34, 211, 238, 0.18);
     }
-
-    .card-hover {
-      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
-    }
-
+    .card-hover { transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease, background .35s ease; }
     .card-hover:hover {
       transform: translateY(-8px);
       border-color: rgba(34, 211, 238, 0.3);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
       background: rgba(255, 255, 255, 0.06);
     }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(28px);
-      animation: fadeUp 0.8s ease forwards;
-    }
-
-    .delay-1 { animation-delay: 0.15s; }
-    .delay-2 { animation-delay: 0.3s; }
-    .delay-3 { animation-delay: 0.45s; }
-    .delay-4 { animation-delay: 0.6s; }
-
-    .float-soft {
-      animation: floatSoft 5s ease-in-out infinite;
-    }
-
-    .pulse-soft {
-      animation: pulseSoft 3s ease-in-out infinite;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes floatSoft {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-
+    .fade-up { opacity: 0; transform: translateY(28px); animation: fadeUp .8s ease forwards; }
+    .delay-1 { animation-delay: .15s; }
+    .delay-2 { animation-delay: .3s; }
+    .delay-3 { animation-delay: .45s; }
+    .delay-4 { animation-delay: .6s; }
+    .float-soft { animation: floatSoft 5s ease-in-out infinite; }
+    .pulse-soft { animation: pulseSoft 3s ease-in-out infinite; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0);} }
+    @keyframes floatSoft { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
     @keyframes pulseSoft {
-      0%, 100% { box-shadow: 0 0 30px rgba(34, 211, 238, 0.28), 0 0 60px rgba(34, 211, 238, 0.12); }
-      50% { box-shadow: 0 0 45px rgba(34, 211, 238, 0.42), 0 0 80px rgba(34, 211, 238, 0.18); }
+      0%,100%{ box-shadow: 0 0 30px rgba(34,211,238,.28), 0 0 60px rgba(34,211,238,.12);} 
+      50%{ box-shadow: 0 0 45px rgba(34,211,238,.42), 0 0 80px rgba(34,211,238,.18);} 
     }
   </style>
 </head>
@@ -89,7 +54,7 @@
 
   <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-      <a href="#home" class="text-lg font-bold tracking-wide">Abdelrahman<span class="text-cyan-400">Mamdouh</span></a>
+      <a href="#home" class="text-lg font-bold tracking-wide">Abdelrahman<span class="text-cyan-400"> MamdOuh</span></a>
       <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
         <a href="#about" class="transition hover:text-cyan-400">About</a>
         <a href="#skills" class="transition hover:text-cyan-400">Skills</a>
@@ -106,10 +71,10 @@
       <div class="mx-auto grid min-h-screen max-w-6xl items-center gap-14 md:grid-cols-2">
         <div>
           <p class="fade-up text-lg text-slate-300">Hello, I'm</p>
-          <h1 class="fade-up delay-1 mt-2 text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">Abdelrahman<br />Mamdouh</h1>
+          <h1 class="fade-up delay-1 mt-2 text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">Abdelrahman<br />MamdOuh</h1>
           <h2 class="fade-up delay-2 mt-4 text-2xl font-semibold sm:text-3xl">Professional <span class="text-cyan-400">Video Editor</span></h2>
           <p class="fade-up delay-3 mt-6 max-w-xl text-base leading-8 text-slate-400 sm:text-lg">
-            Crafting cinematic narratives that captivate audiences. I specialize in transforming raw footage into high-impact visual stories for YouTube, social media, and digital brands.
+            I specialize in creating high-performing ad creatives and scroll-stopping reels that capture attention within the first seconds. By combining storytelling, fast-paced editing, and platform-focused strategies, I transform raw footage into engaging content that drives real results. Whether it’s for social media campaigns or short-form content, my goal is to boost engagement, increase reach, and turn viewers into customers.
           </p>
           <div class="fade-up delay-4 mt-8 flex flex-wrap gap-4">
             <a href="https://drive.google.com/drive/u/0/folders/1wLSHyVZZziHsnhDpv09_vFhiZNdaB4R7?lfhs=2" target="_blank" class="rounded-2xl bg-cyan-400 px-7 py-3 font-semibold text-slate-950 transition hover:scale-105 glow-btn">View Projects</a>
@@ -129,9 +94,12 @@
     <section id="about" class="px-6 py-24">
       <div class="mx-auto max-w-6xl">
         <h2 class="mb-12 text-center text-4xl font-bold">About <span class="text-cyan-400">Me</span></h2>
-        <div class="glass card-hover rounded-3xl p-8 md:p-10">
+        <div class="glass card-hover rounded-3xl p-8 md:p-10 space-y-6">
           <p class="text-center text-lg leading-8 text-slate-300">
-            I create high-quality video content that blends cinematic storytelling, engaging short-form edits, and strong visual identity. My goal is to turn ideas into polished videos that capture attention, keep audiences watching, and deliver real impact.
+            I’m Abdelrahman Mamdouh, a Video Editor and Content Strategist focused on creating high-performing ads and scroll-stopping reels. I specialize in turning raw footage into engaging short-form content that captures attention, increases retention, and drives real results.
+          </p>
+          <p class="text-center text-lg leading-8 text-slate-300">
+            With a strong sense of storytelling, pacing, and audience psychology, I help brands and creators grow faster through content that not only looks cinematic—but performs. Let’s create content that stands out and converts.
           </p>
         </div>
       </div>
@@ -143,34 +111,32 @@
         <div class="grid gap-6 md:grid-cols-3">
           <div class="glass card-hover rounded-3xl p-8">
             <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-2xl text-cyan-400">🎬</div>
-            <h3 class="mb-5 text-2xl font-semibold">Video Editing</h3>
+            <h3 class="mb-5 text-2xl font-semibold">Content & Video</h3>
             <ul class="space-y-3 text-slate-400">
-              <li>Long Form YouTube</li>
-              <li>Shorts / Reels</li>
-              <li>Cinematic Storytelling</li>
-              <li>Commercial Editing</li>
+              <li>High-Converting Ads Editing</li>
+              <li>Scroll-Stopping Reels & Shorts</li>
+              <li>YouTube Content (Long & Short Form)</li>
             </ul>
           </div>
 
           <div class="glass card-hover rounded-3xl p-8">
-            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-2xl text-cyan-400">🎧</div>
-            <h3 class="mb-5 text-2xl font-semibold">Visual & Audio</h3>
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-2xl text-cyan-400">🎨</div>
+            <h3 class="mb-5 text-2xl font-semibold">Creative Design</h3>
             <ul class="space-y-3 text-slate-400">
-              <li>Color Grading</li>
-              <li>Sound Design</li>
-              <li>VFX & Transitions</li>
-              <li>Audio Cleanup</li>
+              <li>Social Media Ads Design (Photoshop)</li>
+              <li>Logo & Brand Identity (Illustrator)</li>
+              <li>UI/UX Design (Figma)</li>
             </ul>
           </div>
 
           <div class="glass card-hover rounded-3xl p-8">
-            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-2xl text-cyan-400">🛠️</div>
-            <h3 class="mb-5 text-2xl font-semibold">Tools & Tech</h3>
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-2xl text-cyan-400">🚀</div>
+            <h3 class="mb-5 text-2xl font-semibold">Creative Tech</h3>
             <ul class="space-y-3 text-slate-400">
-              <li>Premiere Pro</li>
-              <li>After Effects</li>
-              <li>CapCut</li>
-              <li>Adobe Audition</li>
+              <li>3D CGI & VFX</li>
+              <li>Motion Graphics & Effects</li>
+              <li>Premiere Pro & After Effects</li>
+              <li>Photoshop, Illustrator, Figma</li>
             </ul>
           </div>
         </div>
@@ -179,13 +145,12 @@
 
     <section id="portfolio" class="px-6 py-24">
       <div class="mx-auto max-w-6xl">
-        <h2 class="mb-12 text-center text-4xl font-bold">My <span class="text-cyan-400">Projects</span></h2>
+        <h2 class="mb-12 text-center text-4xl font-bold">Video Editing <span class="text-cyan-400">Portfolio</span></h2>
         <div class="glass card-hover rounded-3xl p-8 md:p-10">
           <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
             <div>
-              <h3 class="text-2xl font-semibold">Video Editing Portfolio</h3>
-              <p class="mt-4 max-w-2xl leading-8 text-slate-400">
-                Explore a curated collection of cinematic edits, high-performing ads, and engaging social media content—all available through my Google Drive portfolio.
+              <p class="mt-2 max-w-2xl leading-8 text-slate-400">
+                Explore a curated portfolio of my work, featuring cinematic edits, high-performing ads, and engaging social media content—all accessible via Google Drive.
               </p>
             </div>
             <div>
@@ -201,27 +166,27 @@
         <h2 class="mb-12 text-center text-4xl font-bold">My <span class="text-cyan-400">Services</span></h2>
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           <div class="glass card-hover rounded-3xl p-8">
-            <div class="mb-5 text-3xl text-cyan-400">▶</div>
-            <h3 class="mb-4 text-2xl font-semibold">YouTube Production</h3>
-            <p class="leading-8 text-slate-400">Long-form editing built for retention, storytelling, and strong visual pacing.</p>
+            <div class="mb-5 text-3xl text-cyan-400">🎬</div>
+            <h3 class="mb-4 text-2xl font-semibold">Video Editing & Content Creation</h3>
+            <p class="leading-8 text-slate-400">I create high-quality video content for YouTube, social media, and digital platforms—combining cinematic storytelling with engaging edits.</p>
           </div>
 
           <div class="glass card-hover rounded-3xl p-8">
-            <div class="mb-5 text-3xl text-cyan-400">⚡</div>
-            <h3 class="mb-4 text-2xl font-semibold">Shorts & Reels</h3>
-            <p class="leading-8 text-slate-400">Fast-paced edits designed to stop scrolling and maximize watch time.</p>
+            <div class="mb-5 text-3xl text-cyan-400">📱</div>
+            <h3 class="mb-4 text-2xl font-semibold">Ads & Reels Editing</h3>
+            <p class="leading-8 text-slate-400">High-converting ads and scroll-stopping reels designed to maximize engagement and performance.</p>
           </div>
 
           <div class="glass card-hover rounded-3xl p-8">
-            <div class="mb-5 text-3xl text-cyan-400">🎞</div>
-            <h3 class="mb-4 text-2xl font-semibold">Cinematic Editing</h3>
-            <p class="leading-8 text-slate-400">Advanced color grading, clean sound, and emotional pacing for premium content.</p>
+            <div class="mb-5 text-3xl text-cyan-400">🎨</div>
+            <h3 class="mb-4 text-2xl font-semibold">Design & Branding</h3>
+            <p class="leading-8 text-slate-400">Impactful visuals, logos, and brand identities that help businesses stand out.</p>
           </div>
 
           <div class="glass card-hover rounded-3xl p-8">
-            <div class="mb-5 text-3xl text-cyan-400">✦</div>
-            <h3 class="mb-4 text-2xl font-semibold">Motion Graphics</h3>
-            <p class="leading-8 text-slate-400">Titles, visual effects, and dynamic graphics that elevate brand presence.</p>
+            <div class="mb-5 text-3xl text-cyan-400">🚀</div>
+            <h3 class="mb-4 text-2xl font-semibold">UI/UX & Creative Tech</h3>
+            <p class="leading-8 text-slate-400">From Figma UI/UX to advanced 3D CGI and VFX for modern digital experiences.</p>
           </div>
         </div>
       </div>
@@ -229,16 +194,16 @@
 
     <section id="contact" class="px-6 py-24">
       <div class="mx-auto max-w-6xl">
-        <div class="glass rounded-[2rem] p-8 md:p-12">
-          <h2 class="text-center text-4xl font-bold">Let's <span class="text-cyan-400">Collaborate</span></h2>
-          <p class="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-slate-400">
-            Ready to turn your ideas into high-performing content? Let’s create something cinematic, modern, and built to get results.
+        <div class="glass rounded-[2rem] p-8 md:p-12 text-center">
+          <h2 class="text-4xl font-bold">Ready to turn your ideas into <span class="text-cyan-400">high-performing content?</span></h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-400">
+            Let’s collaborate and create videos that capture attention and drive results.
           </p>
 
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="https://www.instagram.com/abdelrahman_mamdouh77/" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400">Instagram</a>
+            <a href="https://www.instagram.com/abdelrahman_mamdouh77/" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400">Insta</a>
             <a href="https://www.facebook.com/abdo.mamdouh.253264" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400">Facebook</a>
-            <a href="https://wa.me/0201154513066" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400">WhatsApp</a>
+            <a href="https://wa.me/0201154513066" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400">What's Up</a>
           </div>
         </div>
       </div>
