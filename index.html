@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
+
     body {
       background:
         radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 25%),
@@ -14,6 +15,7 @@
         #020617;
       overflow-x: hidden;
     }
+
     .glass {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -22,53 +24,145 @@
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
       text-align: center;
     }
+
     .glow-btn { box-shadow: 0 0 20px rgba(34, 211, 238, 0.35); }
+
     .glow-ring {
       box-shadow:
         0 0 0 8px rgba(34, 211, 238, 0.05),
         0 0 30px rgba(34, 211, 238, 0.35),
         0 0 60px rgba(34, 211, 238, 0.18);
     }
-    .card-hover { transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease, background .35s ease; }
+
+    .card-hover {
+      transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+      will-change: transform;
+    }
+
     .card-hover:hover {
       transform: translateY(-8px);
       border-color: rgba(34, 211, 238, 0.3);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
       background: rgba(255, 255, 255, 0.06);
     }
-    .fade-up { opacity: 0; transform: translateY(28px); animation: fadeUp .8s ease forwards; }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      animation: fadeUp .8s ease forwards;
+    }
+
     .delay-1 { animation-delay: .15s; }
     .delay-2 { animation-delay: .3s; }
     .delay-3 { animation-delay: .45s; }
     .delay-4 { animation-delay: .6s; }
+
     .float-soft { animation: floatSoft 5s ease-in-out infinite; }
     .pulse-soft { animation: pulseSoft 3s ease-in-out infinite; }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0);} }
-    @keyframes floatSoft { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatSoft {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
     @keyframes pulseSoft {
-      0%,100%{ box-shadow: 0 0 30px rgba(34,211,238,.28), 0 0 60px rgba(34,211,238,.12);} 
-      50%{ box-shadow: 0 0 45px rgba(34,211,238,.42), 0 0 80px rgba(34,211,238,.18);} 
+      0%,100% {
+        box-shadow: 0 0 30px rgba(34,211,238,.28), 0 0 60px rgba(34,211,238,.12);
+      }
+      50% {
+        box-shadow: 0 0 45px rgba(34,211,238,.42), 0 0 80px rgba(34,211,238,.18);
+      }
+    }
+
+    /* New light animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px) scale(.985);
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
+      will-change: opacity, transform;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .nav-scrolled {
+      background: rgba(2, 6, 23, 0.88);
+      border-color: rgba(255,255,255,0.12);
+      box-shadow: 0 10px 30px rgba(0,0,0,.22);
+    }
+
+    .link-animate,
+    .btn-animate {
+      transition: transform .28s ease, box-shadow .28s ease, color .28s ease, border-color .28s ease, background-color .28s ease;
+    }
+
+    .link-animate:hover,
+    .btn-animate:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-parallax {
+      will-change: transform;
+      transition: transform .15s linear;
+    }
+
+    .img-zoom {
+      transition: transform 1.2s ease;
+    }
+
+    .img-zoom:hover {
+      transform: scale(1.04);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .fade-up,
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
     }
   </style>
 </head>
 <body class="text-white selection:bg-cyan-400 selection:text-slate-950">
 
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl transition-all duration-300">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-      <a href="#home" class="text-lg font-bold tracking-wide">Abdelrahman<span class="text-cyan-400"> MamdOuh</span></a>
+      <a href="#home" class="text-lg font-bold tracking-wide link-animate">Abdelrahman<span class="text-cyan-400"> MamdOuh</span></a>
       <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-        <a href="#about" class="transition hover:text-cyan-400">About</a>
-        <a href="#skills" class="transition hover:text-cyan-400">Skills</a>
-        <a href="#portfolio" class="transition hover:text-cyan-400">Projects</a>
-        <a href="#services" class="transition hover:text-cyan-400">Services</a>
-        <a href="#contact" class="rounded-xl bg-cyan-400 px-4 py-2 font-semibold text-slate-950 transition hover:scale-105 glow-btn">Contact Me</a>
+        <a href="#about" class="transition hover:text-cyan-400 link-animate">About</a>
+        <a href="#skills" class="transition hover:text-cyan-400 link-animate">Skills</a>
+        <a href="#portfolio" class="transition hover:text-cyan-400 link-animate">Projects</a>
+        <a href="#services" class="transition hover:text-cyan-400 link-animate">Services</a>
+        <a href="#contact" class="rounded-xl bg-cyan-400 px-4 py-2 font-semibold text-slate-950 transition hover:scale-105 glow-btn btn-animate">Contact Me</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section id="home" class="relative overflow-hidden px-6 pt-32 pb-20">
-      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_80%_20%,rgba(34,211,238,0.16),transparent_18%),radial-gradient(circle_at_15%_85%,rgba(59,130,246,0.12),transparent_20%)]"></div>
+      <div id="heroParallax" class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_80%_20%,rgba(34,211,238,0.16),transparent_18%),radial-gradient(circle_at_15%_85%,rgba(59,130,246,0.12),transparent_20%)] hero-parallax"></div>
       <div class="mx-auto grid min-h-screen max-w-6xl items-center gap-14 md:grid-cols-2">
         <div>
           <p class="fade-up text-lg text-slate-300">Hello, I'm</p>
@@ -78,21 +172,21 @@
             I specialize in creating high-performing ad creatives and scroll-stopping reels that capture attention within the first seconds. By combining storytelling, fast-paced editing, and platform-focused strategies, I transform raw footage into engaging content that drives real results. Whether it’s for social media campaigns or short-form content, my goal is to boost engagement, increase reach, and turn viewers into customers.
           </p>
           <div class="fade-up delay-4 mt-8 flex flex-wrap gap-4">
-            <a href="https://drive.google.com/drive/u/0/folders/1wLSHyVZZziHsnhDpv09_vFhiZNdaB4R7?lfhs=2" target="_blank" class="rounded-2xl bg-cyan-400 px-7 py-3 font-semibold text-slate-950 transition hover:scale-105 glow-btn">View Projects</a>
-            <a href="#contact" class="rounded-2xl border border-white/20 px-7 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400">Contact Me</a>
+            <a href="https://drive.google.com/drive/u/0/folders/1wLSHyVZZziHsnhDpv09_vFhiZNdaB4R7?lfhs=2" target="_blank" class="rounded-2xl bg-cyan-400 px-7 py-3 font-semibold text-slate-950 transition hover:scale-105 glow-btn btn-animate">View Projects</a>
+            <a href="#contact" class="rounded-2xl border border-white/20 px-7 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400 btn-animate">Contact Me</a>
           </div>
         </div>
 
         <div class="fade-up delay-2 flex justify-center md:justify-end">
           <div class="float-soft pulse-soft glow-ring relative h-72 w-72 overflow-hidden rounded-full border-4 border-cyan-400 bg-slate-950 sm:h-80 sm:w-80 lg:h-96 lg:w-96">
-            <img src="2.jpeg" alt="Abdelrahman Mamdouh" class="h-full w-full object-cover" />
+            <img src="2.jpeg" alt="Abdelrahman Mamdouh" class="h-full w-full object-cover img-zoom" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/10 to-transparent"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="px-6 py-24">
+    <section id="about" class="px-6 py-24 reveal">
       <div class="mx-auto max-w-6xl">
         <h2 class="mb-12 text-center text-4xl font-bold">About <span class="text-cyan-400">Me</span></h2>
         <div class="glass card-hover rounded-3xl p-8 md:p-10 space-y-6">
@@ -106,11 +200,11 @@
       </div>
     </section>
 
-    <section id="skills" class="px-6 py-24">
+    <section id="skills" class="px-6 py-24 reveal">
       <div class="mx-auto max-w-6xl">
         <h2 class="mb-12 text-center text-4xl font-bold">My <span class="text-cyan-400">Skills</span></h2>
         <div class="grid gap-6 md:grid-cols-3 justify-items-center">
-          <div class="glass card-hover rounded-3xl p-8 text-center max-w-sm">
+          <div class="glass card-hover rounded-3xl p-8 text-center max-w-sm reveal">
             <div class="mb-5 mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-2xl text-cyan-400">🎬</div>
             <h3 class="mb-5 text-2xl font-semibold">Content & Video</h3>
             <ul class="space-y-3 text-slate-400">
@@ -120,7 +214,7 @@
             </ul>
           </div>
 
-          <div class="glass card-hover rounded-3xl p-8">
+          <div class="glass card-hover rounded-3xl p-8 reveal">
             <div class="mb-5 mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-2xl text-cyan-400">🎨</div>
             <h3 class="mb-5 text-2xl font-semibold">Creative Design</h3>
             <ul class="space-y-3 text-slate-400">
@@ -130,7 +224,7 @@
             </ul>
           </div>
 
-          <div class="glass card-hover rounded-3xl p-8">
+          <div class="glass card-hover rounded-3xl p-8 reveal">
             <div class="mb-5 mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-2xl text-cyan-400">🚀</div>
             <h3 class="mb-5 text-2xl font-semibold">Creative Tech</h3>
             <ul class="space-y-3 text-slate-400">
@@ -144,7 +238,7 @@
       </div>
     </section>
 
-    <section id="portfolio" class="px-6 py-24">
+    <section id="portfolio" class="px-6 py-24 reveal">
       <div class="mx-auto max-w-6xl">
         <h2 class="mb-12 text-center text-4xl font-bold">Video Editing <span class="text-cyan-400">Portfolio</span></h2>
         <div class="glass card-hover rounded-3xl p-8 md:p-10">
@@ -155,36 +249,36 @@
               </p>
             </div>
             <div>
-              <a href="https://drive.google.com/drive/u/0/folders/1wLSHyVZZziHsnhDpv09_vFhiZNdaB4R7?lfhs=2" target="_blank" class="inline-flex rounded-2xl border border-cyan-400/40 bg-cyan-400/10 px-6 py-3 font-semibold text-cyan-400 transition hover:scale-105 hover:bg-cyan-400 hover:text-slate-950">View on Google Drive</a>
+              <a href="https://drive.google.com/drive/u/0/folders/1wLSHyVZZziHsnhDpv09_vFhiZNdaB4R7?lfhs=2" target="_blank" class="inline-flex rounded-2xl border border-cyan-400/40 bg-cyan-400/10 px-6 py-3 font-semibold text-cyan-400 transition hover:scale-105 hover:bg-cyan-400 hover:text-slate-950 btn-animate">View on Google Drive</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="px-6 py-24">
+    <section id="services" class="px-6 py-24 reveal">
       <div class="mx-auto max-w-6xl">
         <h2 class="mb-12 text-center text-4xl font-bold">My <span class="text-cyan-400">Services</span></h2>
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <div class="glass card-hover rounded-3xl p-8">
+          <div class="glass card-hover rounded-3xl p-8 reveal">
             <div class="mb-5 text-3xl text-cyan-400">🎬</div>
             <h3 class="mb-4 text-2xl font-semibold">Video Editing & Content Creation</h3>
             <p class="leading-8 text-slate-400">I create high-quality video content for YouTube, social media, and digital platforms—combining cinematic storytelling with engaging edits.</p>
           </div>
 
-          <div class="glass card-hover rounded-3xl p-8">
+          <div class="glass card-hover rounded-3xl p-8 reveal">
             <div class="mb-5 text-3xl text-cyan-400">📱</div>
             <h3 class="mb-4 text-2xl font-semibold">Ads & Reels Editing</h3>
             <p class="leading-8 text-slate-400">High-converting ads and scroll-stopping reels designed to maximize engagement and performance.</p>
           </div>
 
-          <div class="glass card-hover rounded-3xl p-8">
+          <div class="glass card-hover rounded-3xl p-8 reveal">
             <div class="mb-5 text-3xl text-cyan-400">🎨</div>
             <h3 class="mb-4 text-2xl font-semibold">Design & Branding</h3>
             <p class="leading-8 text-slate-400">Impactful visuals, logos, and brand identities that help businesses stand out.</p>
           </div>
 
-          <div class="glass card-hover rounded-3xl p-8">
+          <div class="glass card-hover rounded-3xl p-8 reveal">
             <div class="mb-5 text-3xl text-cyan-400">🚀</div>
             <h3 class="mb-4 text-2xl font-semibold">UI/UX & Creative Tech</h3>
             <p class="leading-8 text-slate-400">From Figma UI/UX to advanced 3D CGI and VFX for modern digital experiences.</p>
@@ -193,18 +287,18 @@
       </div>
     </section>
 
-    <section id="contact" class="px-6 py-24">
+    <section id="contact" class="px-6 py-24 reveal">
       <div class="mx-auto max-w-6xl">
-        <div class="glass rounded-[2rem] p-8 md:p-12 text-center">
+        <div class="glass rounded-[2rem] p-8 md:p-12 text-center card-hover">
           <h2 class="text-4xl font-bold">Ready to turn your ideas into <span class="text-cyan-400">high-performing content?</span></h2>
           <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-400">
             Let’s collaborate and create videos that capture attention and drive results.
           </p>
 
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="https://www.instagram.com/abdelrahman_mamdouh77/" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400">Insta</a>
-            <a href="https://www.facebook.com/abdo.mamdouh.253264" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400">Facebook</a>
-            <a href="https://wa.me/0201154513066" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400">What's Up</a>
+            <a href="https://www.instagram.com/abdelrahman_mamdouh77/" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400 btn-animate">Insta</a>
+            <a href="https://www.facebook.com/abdo.mamdouh.253264" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400 btn-animate">Facebook</a>
+            <a href="https://wa.me/0201154513066" target="_blank" class="rounded-2xl border border-white/15 px-5 py-3 font-medium transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400 btn-animate">What's Up</a>
           </div>
         </div>
       </div>
@@ -214,6 +308,46 @@
   <footer class="border-t border-white/10 px-6 py-8 text-center text-slate-500">
     © 2026 Video Editing Portfolio. All rights reserved.
   </footer>
+
+  <script>
+    // Navbar subtle effect on scroll
+    const header = document.getElementById('siteHeader');
+    const onScrollHeader = () => {
+      if (window.scrollY > 20) {
+        header.classList.add('nav-scrolled');
+      } else {
+        header.classList.remove('nav-scrolled');
+      }
+    };
+    onScrollHeader();
+    window.addEventListener('scroll', onScrollHeader);
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.14
+    });
+
+    revealEls.forEach((el) => observer.observe(el));
+
+    // Very light hero parallax
+    const heroParallax = document.getElementById('heroParallax');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!reduceMotion) {
+      window.addEventListener('scroll', () => {
+        const offset = window.scrollY * 0.12;
+        heroParallax.style.transform = `translateY(${offset}px)`;
+      });
+    }
+  </script>
 
 </body>
 </html>
