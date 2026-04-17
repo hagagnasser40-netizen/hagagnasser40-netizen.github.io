@@ -1,189 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video Editing Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="min-h-screen bg-slate-950 text-white">
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur">
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#home" class="text-lg font-semibold tracking-wide">Video Editing Portfolio</a>
-        <nav class="hidden gap-6 text-sm text-slate-300 md:flex">
-          <a href="#about" class="transition hover:text-white">About</a>
-          <a href="#portfolio" class="transition hover:text-white">Portfolio</a>
-          <a href="#services" class="transition hover:text-white">Services</a>
-          <a href="#contact" class="transition hover:text-white">Contact</a>
-        </nav>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Video Editing Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+<!-- NAVBAR -->
+<header class="fixed w-full z-50 bg-black/80 backdrop-blur border-b border-white/10">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="font-bold text-lg">Abdelrahman<span class="text-cyan-400">Sabry</span></h1>
+    <nav class="hidden md:flex gap-6 text-sm text-gray-300">
+      <a href="#about" class="hover:text-cyan-400">About</a>
+      <a href="#skills" class="hover:text-cyan-400">Skills</a>
+      <a href="#portfolio" class="hover:text-cyan-400">Projects</a>
+      <a href="#services" class="hover:text-cyan-400">Services</a>
+      <a href="#contact" class="px-4 py-2 bg-cyan-500 rounded-lg text-black font-semibold">Contact Me</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center pt-24 px-6 max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-10 items-center w-full">
+    <div>
+      <p class="text-gray-400">Hello, I'm</p>
+      <h1 class="text-5xl font-bold leading-tight mt-2">Abdelrahman Sabry</h1>
+      <h2 class="text-2xl mt-3">Professional <span class="text-cyan-400">Video Editor</span></h2>
+      <p class="mt-4 text-gray-400 max-w-lg">
+        Crafting cinematic narratives that captivate audiences. I specialize in transforming raw footage into high-impact visual stories.
+      </p>
+      <div class="flex gap-4 mt-6">
+        <a href="https://drive.google.com/drive/u/0/folders/1wLSHyVZZziHsnhDpv09_vFhiZNdaB4R7?lfhs=2" target="_blank" class="bg-cyan-500 px-6 py-3 rounded-lg text-black font-semibold">View Projects</a>
+        <a href="#contact" class="border border-white/30 px-6 py-3 rounded-lg">Contact Me</a>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <section id="home" class="relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.22),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(168,85,247,0.18),transparent_30%)]"></div>
-        <div class="relative mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center md:py-28">
-          <div>
-            <p class="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-sky-400">Creative Editor</p>
-            <h1 class="max-w-2xl text-4xl font-bold leading-tight md:text-6xl">Video Editing Portfolio</h1>
-            <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
-              Explore a curated portfolio of my work, featuring cinematic edits,
-              high-performing ads, and engaging social media content—all accessible
-              via Google Drive.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a
-                href="https://drive.google.com/drive/u/0/folders/1wLSHyVZZziHsnhDpv09_vFhiZNdaB4R7?lfhs=2"
-                target="_blank"
-                rel="noreferrer"
-                class="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
-              >
-                View on Google Drive
-              </a>
-              <a
-                href="#contact"
-                class="rounded-2xl border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                Let’s Collaborate
-              </a>
-            </div>
-          </div>
+    <!-- IMAGE CIRCLE -->
+    <div class="flex justify-center">
+      <div class="w-72 h-72 rounded-full border-4 border-cyan-400 shadow-[0_0_40px_#22d3ee] overflow-hidden">
+        <img src="https://i.imgur.com/8Km9tLL.jpg" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl shadow-black/30 backdrop-blur">
-            <div class="rounded-[1.5rem] border border-white/10 bg-slate-900 p-8">
-              <div class="grid gap-4 sm:grid-cols-2">
-                <div class="rounded-2xl bg-white/5 p-5">
-                  <p class="text-sm text-slate-400">Focus</p>
-                  <p class="mt-2 text-xl font-semibold">Cinematic Storytelling</p>
-                </div>
-                <div class="rounded-2xl bg-white/5 p-5">
-                  <p class="text-sm text-slate-400">Specialty</p>
-                  <p class="mt-2 text-xl font-semibold">Ads & Reels Editing</p>
-                </div>
-                <div class="rounded-2xl bg-white/5 p-5 sm:col-span-2">
-                  <p class="text-sm text-slate-400">Creative Stack</p>
-                  <p class="mt-2 text-xl font-semibold">Design, Branding, UI/UX, CGI, and VFX</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold text-center mb-10">About <span class="text-cyan-400">Me</span></h2>
+  <p class="text-gray-400 text-center max-w-3xl mx-auto">
+    I create high-quality video content combining cinematic storytelling with engaging edits that capture attention and keep audiences watching.
+  </p>
+</section>
 
-      <section id="about" class="mx-auto max-w-6xl px-6 py-16 md:py-24">
-        <div class="grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
-          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <p class="text-sm font-medium uppercase tracking-[0.3em] text-sky-400">About</p>
-            <h2 class="mt-4 text-3xl font-bold md:text-4xl">Video Editing & Content Creation</h2>
-            <p class="mt-6 text-base leading-8 text-slate-300">
-              I create high-quality video content for YouTube, social media, and
-              digital platforms—combining cinematic storytelling with engaging
-              short-form edits that capture attention and keep audiences watching.
-            </p>
-          </div>
-          <div class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-sky-500/10 to-fuchsia-500/10 p-8">
-            <p class="text-sm font-medium uppercase tracking-[0.3em] text-sky-400">What I do</p>
-            <p class="mt-4 text-xl font-semibold leading-8">
-              I build visual experiences that blend creativity, branding, and
-              performance for modern digital platforms.
-            </p>
-          </div>
-        </div>
-      </section>
+<!-- SKILLS -->
+<section id="skills" class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold text-center mb-10">My <span class="text-cyan-400">Skills</span></h2>
+  <div class="grid md:grid-cols-3 gap-6">
 
-      <section id="portfolio" class="mx-auto max-w-6xl px-6 py-16 md:py-24">
-        <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8 md:p-10">
-          <p class="text-sm font-medium uppercase tracking-[0.3em] text-sky-400">Portfolio</p>
-          <h2 class="mt-4 text-3xl font-bold md:text-4xl">Explore selected work</h2>
-          <p class="mt-5 max-w-3xl text-base leading-8 text-slate-300">
-            Explore a curated portfolio of my work, featuring cinematic edits,
-            high-performing ads, and engaging social media content—all accessible
-            via Google Drive.
-          </p>
-          <a
-            href="https://drive.google.com/drive/u/0/folders/1wLSHyVZZziHsnhDpv09_vFhiZNdaB4R7?lfhs=2"
-            target="_blank"
-            rel="noreferrer"
-            class="mt-8 inline-flex rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
-          >
-            View on Google Drive
-          </a>
-        </div>
-      </section>
+    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+      <h3 class="text-xl font-semibold mb-4">Video Editing</h3>
+      <ul class="text-gray-400 space-y-2">
+        <li>Long Form</li>
+        <li>Shorts / Reels</li>
+        <li>Cinematic</li>
+      </ul>
+    </div>
 
-      <section id="services" class="mx-auto max-w-6xl px-6 py-16 md:py-24">
-        <div class="mb-10">
-          <p class="text-sm font-medium uppercase tracking-[0.3em] text-sky-400">Services</p>
-          <h2 class="mt-4 text-3xl font-bold md:text-4xl">Creative services built for growth</h2>
-        </div>
+    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+      <h3 class="text-xl font-semibold mb-4">Visual & Audio</h3>
+      <ul class="text-gray-400 space-y-2">
+        <li>Color Grading</li>
+        <li>Sound Design</li>
+        <li>VFX</li>
+      </ul>
+    </div>
 
-        <div class="grid gap-6 md:grid-cols-2">
-          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8 transition hover:-translate-y-1 hover:bg-white/10">
-            <h3 class="text-2xl font-semibold">Video Editing & Content Creation</h3>
-            <p class="mt-4 leading-8 text-slate-300">
-              I create high-quality video content for YouTube, social media, and digital platforms—combining cinematic storytelling with engaging short-form edits that capture attention and keep audiences watching.
-            </p>
-          </div>
+    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+      <h3 class="text-xl font-semibold mb-4">Tools</h3>
+      <ul class="text-gray-400 space-y-2">
+        <li>Premiere Pro</li>
+        <li>After Effects</li>
+        <li>CapCut</li>
+      </ul>
+    </div>
 
-          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8 transition hover:-translate-y-1 hover:bg-white/10">
-            <h3 class="text-2xl font-semibold">Ads & Reels Editing</h3>
-            <p class="mt-4 leading-8 text-slate-300">
-              I specialize in high-converting ads and scroll-stopping reels designed to maximize engagement, retention, and performance across all social media platforms.
-            </p>
-          </div>
+  </div>
+</section>
 
-          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8 transition hover:-translate-y-1 hover:bg-white/10">
-            <h3 class="text-2xl font-semibold">Design & Branding</h3>
-            <p class="mt-4 leading-8 text-slate-300">
-              I design impactful visuals including social media ads, logos, and full brand identities that help businesses stand out and build a strong visual presence.
-            </p>
-          </div>
+<!-- PORTFOLIO -->
+<section id="portfolio" class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold text-center mb-10">My <span class="text-cyan-400">Projects</span></h2>
+  <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+    <h3 class="text-xl font-semibold">Video Editing Portfolio</h3>
+    <p class="text-gray-400 mt-2">Professional cinematic editing projects.</p>
+    <a href="https://drive.google.com/drive/u/0/folders/1wLSHyVZZziHsnhDpv09_vFhiZNdaB4R7?lfhs=2" target="_blank" class="text-cyan-400 mt-3 inline-block">View on Google Drive</a>
+  </div>
+</section>
 
-          <div class="rounded-[2rem] border border-white/10 bg-white/5 p-8 transition hover:-translate-y-1 hover:bg-white/10">
-            <h3 class="text-2xl font-semibold">UI/UX & Creative Tech</h3>
-            <p class="mt-4 leading-8 text-slate-300">
-              From UI/UX website design in Figma to advanced 3D CGI and VFX, I create modern, visually engaging digital experiences that combine creativity with performance.
-            </p>
-          </div>
-        </div>
-      </section>
+<!-- SERVICES -->
+<section id="services" class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold text-center mb-10">My <span class="text-cyan-400">Services</span></h2>
+  <div class="grid md:grid-cols-4 gap-6">
+    <div class="bg-white/5 p-6 rounded-xl border border-white/10">YouTube Production</div>
+    <div class="bg-white/5 p-6 rounded-xl border border-white/10">Shorts & Reels</div>
+    <div class="bg-white/5 p-6 rounded-xl border border-white/10">Cinematic Editing</div>
+    <div class="bg-white/5 p-6 rounded-xl border border-white/10">Motion Graphics</div>
+  </div>
+</section>
 
-      <section id="contact" class="mx-auto max-w-6xl px-6 py-16 md:py-24">
-        <div class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 md:p-12">
-          <p class="text-sm font-medium uppercase tracking-[0.3em] text-sky-400">Contact</p>
-          <h2 class="mt-4 max-w-3xl text-3xl font-bold leading-tight md:text-5xl">
-            Ready to turn your ideas into high-performing content?
-          </h2>
-          <p class="mt-5 max-w-3xl text-base leading-8 text-slate-300">
-            Let’s collaborate and create videos that capture attention and drive results.
-          </p>
+<!-- CONTACT -->
+<section id="contact" class="max-w-6xl mx-auto px-6 py-20 text-center">
+  <h2 class="text-3xl font-bold">Let's <span class="text-cyan-400">Collaborate</span></h2>
+  <p class="text-gray-400 mt-3">Let’s create something cinematic.</p>
 
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a
-              href="https://www.instagram.com/abdelrahman_mamdouh77/"
-              target="_blank"
-              rel="noreferrer"
-              class="rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold transition hover:bg-white/10"
-            >Instagram</a>
-            <a
-              href="https://www.facebook.com/abdo.mamdouh.253264"
-              target="_blank"
-              rel="noreferrer"
-              class="rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold transition hover:bg-white/10"
-            >Facebook</a>
-            <a
-              href="https://wa.me/0201154513066"
-              target="_blank"
-              rel="noreferrer"
-              class="rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold transition hover:bg-white/10"
-            >WhatsApp</a>
-          </div>
-        </div>
-      </section>
-    </main>
+  <div class="flex justify-center gap-4 mt-6">
+    <a href="https://www.instagram.com/abdelrahman_mamdouh77/" class="border px-4 py-2 rounded">Instagram</a>
+    <a href="https://www.facebook.com/abdo.mamdouh.253264" class="border px-4 py-2 rounded">Facebook</a>
+    <a href="https://wa.me/0201154513066" class="border px-4 py-2 rounded">WhatsApp</a>
+  </div>
+</section>
 
-    <footer class="border-t border-white/10 px-6 py-6 text-center text-sm text-slate-400">
-      © 2026 Video Editing Portfolio. All rights reserved.
-    </footer>
-  </body>
+<footer class="text-center py-6 text-gray-500 border-t border-white/10">
+© 2026 Video Editing Portfolio
+</footer>
+
+</body>
 </html>
